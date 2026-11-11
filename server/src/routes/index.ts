@@ -13,3 +13,4 @@ router.get("health", (_req, res) => {
 });
 
 // step6: start the server -> server/src/server.ts
+export default router;

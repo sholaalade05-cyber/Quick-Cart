@@ -49,7 +49,6 @@ export interface IProduct {
   hightlights: IProductHightlight[];
   ratings: number;
   ratingCount: number[];
-
   solid: number;
   flashSaleStock?: number;
   bundleProduct: Types.ObjectId[]; //"frequently bought together" product
@@ -119,6 +118,8 @@ const productSchema = new Schema<IProduct>(
     tags: [{ type: String }],
 
     badge: { type: String },
+
+    gallery: [{ type: String }],
 
     hightlights: [{ icon: String, title: String, text: String }],
 
