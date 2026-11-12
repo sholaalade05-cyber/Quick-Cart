@@ -34,6 +34,7 @@ export type seedProduct = {
   specs?: IProductSpec[];
   tags?: string[];
   gallery?: string[]; // extra photos file name in /image/products for the product page
+  photo?: string; //photo name on cloudinary when its isnt slug eg "bluethoot-portable-speaker"
   highlights?: IProductHightlight[];
   ratingCounts?: number[];
   bundle?: string[];
@@ -73,6 +74,7 @@ export type SeedProduct = {
   specs?: IProductSpec[];
   tags?: string[];
   gallery?: string[]; // extra photo file names in /images/products for the product page
+  photo?: string; // photo name on Cloudinary when it differs from the product slug
   highlights?: IProductHightlight[];
   ratingCounts?: number[]; // 5, 4, 3, 2 and 1 star counts; seed.ts makes them up when not set
   bundle?: string[]; // names of "Frequently Bought Together" products
@@ -732,6 +734,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Design Systems Handbook",
+    photo: "design-systen-handbook",
     category: "books",
     brand: "Techstudio",
     sku: "QC-BK-301",
@@ -1572,6 +1575,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Bluetooth Portable Speaker",
+    photo: "bluethoot-portable-speaker",
     category: "electronics",
     brand: "Aura",
     sku: "QC-EL-203",
@@ -1784,6 +1788,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Cast Iron Skillet 10-inch",
+    photo: "cast-iron-skillet-10-inch",
     category: "kitchen",
     brand: "Aurora Home",
     sku: "QC-KT-202",
@@ -2518,6 +2523,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Daily Planner & Hardcover Journal",
+    photo: "daily-planner- n-hardcover-journal",
     category: "books",
     brand: "Techstudio",
     sku: "QC-BK-302",
@@ -2731,6 +2737,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Smart Gooseneck Kettle",
+    photo: "electric-gooseneck-kettle", // no photos of its own: uses the electric Gooseneck kettle photos
     category: "kitchen",
     brand: "Brewline",
     sku: "QC-HM-102",
@@ -3683,6 +3690,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Gold-Plated 3.5mm AUX Cable",
+    photo: "gold-plated-3.5mm-aux-cable",
     category: "electronics",
     brand: "Aura Sound Labs",
     sku: "QC-AU-312",
@@ -3998,6 +4006,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "True Wireless ANC Earbuds",
+    photo: "aeropro-wireless-buds",
     category: "electronics",
     brand: "Aura Sound Labs",
     sku: "QC-AU-315",
@@ -4105,6 +4114,7 @@ export const products: SeedProduct[] = [
   },
   {
     name: "Magnetic Headphone Stand & USB Hub",
+    photo: "magnetic-headphone-stand-n-usb-hub",
     category: "electronics",
     brand: "Aura Sound Labs",
     sku: "QC-AU-316",
